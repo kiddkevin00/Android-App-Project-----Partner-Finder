@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/datailayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/placeTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="33dp" >
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/createButton"
+        android:layout_marginBottom="82dp"
+        android:layout_toRightOf="@+id/nooffrndstextView"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinner1"
+        android:layout_alignRight="@+id/NametextView"
+        android:layout_marginBottom="38dp"
+        android:text="When"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/placeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dateTextView"
+        android:layout_alignBottom="@+id/dateTextView"
+        android:layout_alignLeft="@+id/nameEditText"
+        android:layout_toLeftOf="@+id/timeEditText"
+        android:ems="10"
+        android:hint="Add a place" />
+
+    <EditText
+        android:id="@+id/timeEditText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/placeEditText"
+        android:layout_alignBottom="@+id/placeEditText"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/placeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/placeEditText"
+        android:layout_alignLeft="@+id/dateTextView"
+        android:layout_marginBottom="32dp"
+        android:text="Where"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/nooffrndstextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinner1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="26dp"
+        android:text="No.of Friends"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/NametextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nameEditText"
+        android:layout_alignBottom="@+id/nameEditText"
+        android:layout_toRightOf="@+id/datailayout"
+        android:text="Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/detailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameEditText"
+        android:layout_marginTop="27dp"
+        android:layout_toRightOf="@+id/datailayout"
+        android:text="Details"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/detailsEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/detailsTextView"
+        android:layout_alignBottom="@+id/detailsTextView"
+        android:layout_alignLeft="@+id/spinner1"
+        android:layout_alignParentRight="true"
+        android:hint="Add more info"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/placeTextView"
+        android:layout_alignBottom="@+id/placeTextView"
+        android:layout_alignLeft="@+id/detailsEditText"
+        android:ems="10"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/createButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_toLeftOf="@+id/dateEditText"
+        android:text="Create" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="ex. Bitrthday Party" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/dateEditText"
+        android:layout_below="@+id/spinner1"
+        android:layout_marginRight="40dp"
+        android:text="Cancel" />
+
+</RelativeLayout>
